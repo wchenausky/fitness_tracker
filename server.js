@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Setup mongoose connection
-mongoose.connect("mongodb://localhost/workouts",{
+mongoose.connect("mongodb://localhost/workout",{
     useNewUrlParse: true,
     useFindAndModify: false,
 });
