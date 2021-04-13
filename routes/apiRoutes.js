@@ -31,5 +31,21 @@ module.exports = app => {
         });
     });
 
+app.get("api/workout/:id", (req, res) => {
+    const { id } = req.params;
+    Workout.findById(id)
+    .then(data => {
+        res.render('', { 
+            excerises: exercises,
+            excersieName: exercise.name,
+            path: "/workout"
+        });
+    })
+    .catch(err => {
+        res.send(err);
+    });
+})
+
+
 
 }
