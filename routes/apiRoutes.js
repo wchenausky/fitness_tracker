@@ -13,7 +13,7 @@ module.exports = app => {
         });
     })
 
-    app.post("/api/workout", (req, res) => {
+    app.post("/api/workout", ({ body}, res) => {
         Workout.create(body)
         .then(data => { 
                 res.send(data);
@@ -22,4 +22,14 @@ module.exports = app => {
             res.send(err);
         });
     });
+
+    app.put("/api/workout/:id", (req, res) => {
+        const { id } = req.params.id;
+        Workout.findByIdAndUpdate(id, { $push: {excerises: req.body} })
+        .then(data => {
+            res.send(data)
+        });
+    });
+
+
 }
