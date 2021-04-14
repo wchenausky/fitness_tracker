@@ -49,6 +49,13 @@ const workoutSchema = new Schema(
 
 //Write dynamically-created property to schema
 
+workoutSchema.virtual('durationTotal')
+.get(()=>{
+  //reduce excercise durations to total of one duration for a day
+return this.exercises.reduce((total,excercise) => {
+  return total + excercise.duration
+}, 0)
+} )
 const Workout = mongoose.model("Workout", workoutSchema);
 
 module.exports = Workout;

@@ -18,7 +18,7 @@ app.use(express.static("public"));
 
 // Setup mongoose connection
 mongoose.connect("mongodb://localhost/workout",{
-    useNewUrlParse: true,
+    // useNewUrlParse: true,
     useFindAndModify: false,
 });
 
@@ -28,5 +28,5 @@ app.use(require("./routes/htmlRoutes"));
 
 // listener got connections
 app.listen(PORT, () => {
-    console.log('listening on port ${PORT');
+    console.log(`listening on port ${PORT}`);
 });
