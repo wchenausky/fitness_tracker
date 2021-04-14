@@ -49,6 +49,6 @@ const workoutSchema = new Schema(
 
 //Write dynamically-created property to schema
 
-const Workout = mongoose.model("Workout", workouSchema);
+const Workout = mongoose.model("Workout", workoutSchema);
 
 module.exports = Workout;

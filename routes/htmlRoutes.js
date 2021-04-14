@@ -1,14 +1,14 @@
 const router = require('express').Router();
 const path = require('path');
 
-modue.exports = app => {
+module.exports = app => {
 
     app.get("/", (req, res) => {
         res.sednFile(path.join(__dirname, "../public/index.html"));
     });
 
     app.get("/", (req, res) => {
-        res.sednFile(path.join(__dirname, "../pblic/excerise.html"));
+        res.sednFile(path.join(__dirname, "../pblic/exercise.html"));
     });
 
     app.get("/", (req, res) => {
