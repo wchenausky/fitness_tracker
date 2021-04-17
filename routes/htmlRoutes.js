@@ -7,11 +7,12 @@ const path = require('path');
         res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
-    router.get("/", (req, res) => {
-        res.sendFile(path.join(__dirname, "../pblic/exercise.html"));
+    router.get("/exercise", (req, res) => {
+        res.sendFile(path.join(__dirname, "../public/exercise.html"));
     });
 
-    router.get("/", (req, res) => {
+    router.get("/stats", (req, res) => {
         res.sendFile(path.join(__dirname, "../public/stats.html"));
     });
+
 module.exports = router;

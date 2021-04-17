@@ -35,20 +35,20 @@ router.put("/api/workout/:id", ({ body, params }, res) => {
     });
 });
 
-// router.get("api/workout/:id", (req, res) => {
-//   const { id } = req.params;
-//   Workout.findById(id)
-//     .then((data) => {
-//       res.render("", {
-//         exercise: exercise,
-//         excersieName: exercise.name,
-//         path: "/workout",
-//       });
-//     })
-//     .catch((err) => {
-//       res.send(err);
-//     });
-// });
+router.get("api/workout/:id", (req, res) => {
+  const { id } = req.params;
+  Workout.findById(id)
+    .then((data) => {
+      res.render("", {
+        exercise: exercise,
+        exerciseName: exercise.name,
+        path: "/workout",
+      });
+    })
+    .catch((err) => {
+      res.send(err);
+    });
+});
 
 router.get("api/workout", (req, res) => {
   workout
@@ -56,7 +56,7 @@ router.get("api/workout", (req, res) => {
       {
         $addFields: {
           totalDuration: {
-            $sum: "$excercise.duration",
+            $sum: "$exercise.duration",
           },
         },
       },
