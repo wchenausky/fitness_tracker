@@ -18,8 +18,9 @@ app.use(express.static("public"));
 
 // Setup mongoose connection
 mongoose.connect("mongodb://localhost/workout",{
-    // useNewUrlParse: true,
+    useNewUrlParse: true,
     useFindAndModify: false,
+    useUnifiedTopology: true,
 });
 
 // routes

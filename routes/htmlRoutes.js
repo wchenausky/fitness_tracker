@@ -4,11 +4,11 @@ const path = require('path');
 module.exports = app => {
 
     app.get("/", (req, res) => {
-        res.sednFile(path.join(__dirname, "../public/index.html"));
+        res.sendFile(path.join(__dirname, "../public/index.html"));
     });
 
     app.get("/", (req, res) => {
-        res.sednFile(path.join(__dirname, "../pblic/exercise.html"));
+        res.sendFile(path.join(__dirname, "../pblic/exercise.html"));
     });
 
     app.get("/", (req, res) => {
