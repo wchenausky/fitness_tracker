@@ -63,10 +63,10 @@ router.get("api/workout", (req, res) => {
     ])
     .then((allWorkouts) => {
       console.log(allWorkouts);
-      res.json(allWorkouts);
+      res.send(allWorkouts);
     })
     .catch((err) => {
-      res.json(err);
+      res.send(err);
     });
     
     app.get("/api/workouts/range", (req, res) => {
@@ -81,9 +81,9 @@ router.get("api/workout", (req, res) => {
       .limit(7)
       .then(allWorkouts => {
           console.log(allWorkouts);
-          res.json(allWorkouts);
+          res.send(allWorkouts);
       }).catch(err => {
-          res.json(err);
+          res.send(err);
       });
   })
 })
