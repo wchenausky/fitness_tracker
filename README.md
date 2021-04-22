@@ -36,4 +36,7 @@
 
 * Heroku Live site: [https://nameless-ravine-00093.herokuapp.com/](https://nameless-ravine-00093.herokuapp.com/)
 
-* Github Repositorie: [https://github.com/wchenausky/fitness_tracker](https://github.com/wchenausky/fitness_tracker)
+* Github Repositorie: [https://github.com/wchenausky/fitness_tracker](.
+
+
+)
